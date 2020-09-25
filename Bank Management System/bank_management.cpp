@@ -32,6 +32,14 @@ void bank :: deposit(){
     balance+=a;
     cout<<"Total balance : \t"<<balance;
 }
+
+void bank :: display(){
+    cout<<"Full Name : \t"<<name;
+    cout<<"Address : \t"<<add;
+    cout<<"Type of account : \t"<<y;
+    cout<<"Total Balance : \t"<<balance;
+    
+}
 int main(){
     int a;
     cout<<"1-> Open Account \n";
