@@ -62,11 +62,21 @@ int main(){
     cin>>ch;
     switch(ch){
         case 1:<<"1-> Open Account \n";
-        obj.open_account();
+            obj.open_account();
+            break;
         case 2:<<"2-> Deposit Money \n";
-        obj.deposit();
+            obj.deposit();
+            break;
         case 3:<<"3-> Withdraw Money \n";
-        obj.withdraw();
+            obj.withdraw();
+            break;
+        case 4:<<"4-> Display Account \n";
+            obj.display();
+            break;
+        case 5:
+            exit(1);
+        default:
+            cout<<"Invalid option try again \n"
     }
 
     return 0;
