@@ -50,12 +50,24 @@ void bank :: withdraw(){
     cout<<"Total Balance : "<<balance
 }
 int main(){
-    int a;
+    int ch;
+    bank obj;
+    do{
     cout<<"1-> Open Account \n";
     cout<<"2-> Deposit Money \n";
     cout<<"3-> Withdraw Money \n";
     cout<<"4-> Display Account \n";
     cout<<"5-> Exit \n";
+    cout<<"Select the option from above \n";
+    cin>>ch;
+    switch(ch){
+        case 1:<<"1-> Open Account \n";
+        obj.open_account();
+        case 2:<<"2-> Deposit Money \n";
+        obj.deposit();
+        case 3:<<"3-> Withdraw Money \n";
+        obj.withdraw();
+    }
 
     return 0;
 }
