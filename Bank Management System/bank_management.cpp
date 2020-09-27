@@ -40,6 +40,15 @@ void bank :: display(){
     cout<<"Total Balance : \t"<<balance;
     
 }
+
+void bank :: withdraw(){
+    float amount;
+    cout<<"\n Withdraw : ";
+    cout<<"Enter amount to withdraw : ";
+    cin>>amount;
+    balance-=amount;\
+    cout<<"Total Balance : "<<balance
+}
 int main(){
     int a;
     cout<<"1-> Open Account \n";
