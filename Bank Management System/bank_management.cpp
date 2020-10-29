@@ -34,10 +34,10 @@ void bank :: deposit(){
 }
 
 void bank :: display(){
-    cout<<"Full Name : \t"<<name;
-    cout<<"Address : \t"<<add;
-    cout<<"Type of account : \t"<<y;
-    cout<<"Total Balance : \t"<<balance;
+    cout<<" Full Name : \t"<<name;
+    cout<<"\n Address : \t"<<add;
+    cout<<"\n Type of account : \t"<<y;
+    cout<<"\n Total Balance : \t"<<balance;
     
 }
 
@@ -47,10 +47,11 @@ void bank :: withdraw(){
     cout<<"Enter amount to withdraw : ";
     cin>>amount;
     balance-=amount;\
-    cout<<"Total Balance : "<<balance
+    cout<<"Total Balance : "<<balance;
 }
 int main(){
     int ch;
+    char x;
     bank obj;
     do{
     cout<<"1-> Open Account \n";
@@ -61,23 +62,29 @@ int main(){
     cout<<"Select the option from above \n";
     cin>>ch;
     switch(ch){
-        case 1:<<"1-> Open Account \n";
+        case 1:cout<<"1-> Open Account \n";
             obj.open_account();
             break;
-        case 2:<<"2-> Deposit Money \n";
+        case 2:cout<<"2-> Deposit Money \n";
             obj.deposit();
             break;
-        case 3:<<"3-> Withdraw Money \n";
+        case 3:cout<<"3-> Withdraw Money \n";
             obj.withdraw();
             break;
-        case 4:<<"4-> Display Account \n";
+        case 4:cout<<"4-> Display Account \n";
             obj.display();
             break;
         case 5:
             exit(1);
         default:
-            cout<<"Invalid option try again \n"
+            cout<<"Invalid option try again \n";
     }
-
+    cout<<"\n Do you want to select next option then press :: Y \n";
+    cout<<"If you want to exit then press :: N \n";
+    cin>>x;
+    if(x =='n' || x =='N')
+    exit(0);
+    }
+    while(x=='y' || x=='Y');
     return 0;
 }
